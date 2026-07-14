@@ -1,4 +1,4 @@
-import { Schema, Types } from "mongoose";
+import { Schema, SchemaDefinition, Types } from "mongoose";
 
 export interface IBaseEntity {
   createdBy?: Types.ObjectId;
@@ -7,19 +7,19 @@ export interface IBaseEntity {
   modifiedAt?: Date;
 }
 
-export function createBaseSchema<T extends object>(fields: T) {
-  return new Schema<T & IBaseEntity>(
+export function createBaseSchema<T extends IBaseEntity>(
+  fields: SchemaDefinition<T>
+) {
+  return new Schema<T>(
     {
       ...fields,
 
       createdBy: {
         type: Schema.Types.ObjectId,
-        required: true,
       },
 
       modifiedBy: {
         type: Schema.Types.ObjectId,
-        required: true,
       },
     },
     {
