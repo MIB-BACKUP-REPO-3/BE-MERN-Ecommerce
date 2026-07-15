@@ -1,4 +1,3 @@
-import { Types } from "mongoose";
 import { createBaseSchema, IBaseEntity } from "./base.schema";
 
 export interface ICustomer extends IBaseEntity {

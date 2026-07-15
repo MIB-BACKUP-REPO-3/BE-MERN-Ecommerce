@@ -1,23 +1,7 @@
 import { model, Types } from "mongoose";
-import { AccountStatus } from "../types/account-status.type";
 import { createBaseSchema } from "./base.schema";
 import { InternalAccountRole } from "../types/internal-account.type";
-
-export interface IInternalAccount {
-  email: string;
-  password: string;
-  contactNumber: string;
-
-  role: InternalAccountRole;
-  status: AccountStatus;
-
-  lastLoginAt?: Date;
-
-  createdBy?: Types.ObjectId;
-  modifiedBy?: Types.ObjectId;
-  createdAt?: Date;
-  modifiedAt?: Date;
-}
+import { IInternalAccount } from "../interfaces/internal-account.interface";
 
 export const InternalAccountSchema = createBaseSchema<IInternalAccount>({
   email: {

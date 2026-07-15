@@ -1,18 +1,6 @@
-import { model, Types } from "mongoose";
+import { model} from "mongoose";
 import { createBaseSchema } from "./base.schema";
-import { AccountStatus } from "../types/account-status.type";
-
-export interface IShopAccount {
-  email: string;
-  password: string;
-  contactNumber: string;
-  status: AccountStatus;
-  lastLoginAt?: Date;
-  createdBy?: Types.ObjectId;
-  modifiedBy?: Types.ObjectId;
-  createdAt?: Date;
-  modifiedAt?: Date;
-}
+import { IShopAccount } from "../interfaces/shop-account.interface";
 
 export const ShopAccountSchema = createBaseSchema<IShopAccount>({
   email: {

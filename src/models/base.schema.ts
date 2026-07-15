@@ -1,11 +1,5 @@
-import { Schema, SchemaDefinition, Types } from "mongoose";
-
-export interface IBaseEntity {
-  createdBy?: Types.ObjectId;
-  modifiedBy?: Types.ObjectId;
-  createdAt?: Date;
-  modifiedAt?: Date;
-}
+import { Schema, SchemaDefinition } from "mongoose";
+import { IBaseEntity } from "../interfaces/base-entity.interface";
 
 export function createBaseSchema<T extends IBaseEntity>(
   fields: SchemaDefinition<T>

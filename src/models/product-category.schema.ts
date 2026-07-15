@@ -1,20 +1,6 @@
 import { model, Types } from "mongoose";
 import { createBaseSchema } from "./base.schema";
-
-
-export interface IProductCategory {
-  name: string;
-  parentId?: Types.ObjectId;
-  shopId?: Types.ObjectId;
-  level: number;
-  path?: string;
-  isActive: boolean;
-  createdBy?: Types.ObjectId;
-  modifiedBy?: Types.ObjectId;
-  createdAt?: Date;
-  modifiedAt?: Date;
-}
-
+import { IProductCategory } from "../interfaces/product-category.interface";
 
 export const ProductCategorySchema =
   createBaseSchema<IProductCategory>({

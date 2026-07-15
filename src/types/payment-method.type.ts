@@ -1,0 +1,1 @@
+export type PaymentMethod= "cod" | "stripe" | "bank_transfer";
