@@ -1,17 +1,12 @@
 import { Types } from "mongoose";
-import { AccountStatus } from "../types/account-status.type";
-import { InternalAccountRole } from "../types/internal-account.type";
+import { AccountStatus } from "../../types/account-status.type";
 
-export interface IInternalAccount {
+export interface IShopAccount {
   email: string;
   password: string;
   contactNumber: string;
-
-  role: InternalAccountRole;
   status: AccountStatus;
-
   lastLoginAt?: Date;
-
   createdBy?: Types.ObjectId;
   modifiedBy?: Types.ObjectId;
   createdAt?: Date;

@@ -1,5 +1,5 @@
 import { Types } from "mongoose";
-import { ProductStatus } from "../types/product-status.type";
+import { ProductStatus } from "../../types/product-status.type";
 
 export interface IProduct {
   shopId: Types.ObjectId;

@@ -1,6 +1,6 @@
 import { Types } from "mongoose";
-import { ShopAffiliationStatus } from "../types/shop-affiliation-status.type";
-import { ShopAccountRole } from "../types/shop-account-role.type";
+import { ShopAffiliationStatus } from "../../types/shop-affiliation-status.type";
+import { ShopAccountRole } from "../../types/shop-account-role.type";
 
 export interface IShopAffiliation {
   shopId: Types.ObjectId;

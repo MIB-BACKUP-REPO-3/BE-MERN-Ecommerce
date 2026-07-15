@@ -1,5 +1,5 @@
 import { Types } from "mongoose";
-import { ShopStatus } from "../types/shop-status.type";
+import { ShopStatus } from "../../types/shop-status.type";
 
 export interface IShop {
   name: string;
