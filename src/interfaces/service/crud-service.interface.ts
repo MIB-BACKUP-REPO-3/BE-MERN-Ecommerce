@@ -1,9 +1,12 @@
-import { Request } from "express-serve-static-core";
-
-export interface ICrudService<T = unknown> {
-  getAll(request:Request): Promise<T[]>;
-  getOne(request:Request): Promise<T | null>;
-  create(request:Request): Promise<T>;
-  update(request:Request): Promise<T | null>;
-  remove(request:Request): Promise<T | null>;
+export interface ICrudService<
+    T,
+    CreateDTO = Partial<T>,
+    UpdateDTO = Partial<T>,
+    FilterDTO = Record<string, unknown>
+> {
+    getAll(filters?: FilterDTO): Promise<T[]>;
+    getOne(id: string): Promise<T | null>;
+    create(data: CreateDTO): Promise<T>;
+    update(id: string, data: UpdateDTO): Promise<T | null>;
+    remove(id: string): Promise<T | null>;
 }

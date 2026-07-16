@@ -1,7 +1,7 @@
 import { model, Types } from "mongoose";
-import { createBaseSchema } from "./base.schema";
-import { InternalAccountRole } from "../types/internal-account.type";
-import { IInternalAccount } from "../interfaces/internal-account.interface";
+import { createBaseSchema } from "./base.schema.js";
+import type { IInternalAccount } from "../interfaces/model/internal-account.interface.js";
+import type { InternalAccountRole } from "../types/internal-account.type.js";
 
 export const InternalAccountSchema = createBaseSchema<IInternalAccount>({
   email: {

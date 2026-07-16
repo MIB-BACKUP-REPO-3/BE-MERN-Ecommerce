@@ -1,5 +1,5 @@
-import { ProductCategoryService } from "../services/product-category.service";
-import { createCrudControllerFromService } from "../utils/create-service-controller";
+import { ProductCategoryService } from "../services/product-category.service.js";
+import { createCrudControllerFromService } from "../utils/create-service-controller.js";
 
 export const productCategoryController = createCrudControllerFromService(ProductCategoryService);
 

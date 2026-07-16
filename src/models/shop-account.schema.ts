@@ -1,6 +1,6 @@
 import { model} from "mongoose";
-import { createBaseSchema } from "./base.schema";
-import { IShopAccount } from "../interfaces/shop-account.interface";
+import { createBaseSchema } from "./base.schema.js";
+import type { IShopAccount } from "../interfaces/model/shop-account.interface.js";
 
 export const ShopAccountSchema = createBaseSchema<IShopAccount>({
   email: {

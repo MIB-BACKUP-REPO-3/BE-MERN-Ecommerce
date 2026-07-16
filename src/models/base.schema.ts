@@ -1,9 +1,9 @@
-import { Schema, SchemaDefinition } from "mongoose";
-import { IBaseEntity } from "../interfaces/base-entity.interface";
+import { Schema, type SchemaDefinition } from "mongoose";
+import type { IBaseEntity } from "../interfaces/model/base-entity.interface.js";
 
 export function createBaseSchema<T extends IBaseEntity>(
   fields: SchemaDefinition<T>
-) {
+): Schema<T> {
   return new Schema<T>(
     {
       ...fields,

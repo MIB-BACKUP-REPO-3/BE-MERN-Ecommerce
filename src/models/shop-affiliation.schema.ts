@@ -1,6 +1,6 @@
 import { model, Types } from "mongoose";
-import { createBaseSchema } from "./base.schema";
-import { IShopAffiliation } from "../interfaces/shop-affiliation.interface";
+import { createBaseSchema } from "./base.schema.js";
+import type { IShopAffiliation } from "../interfaces/model/shop-affiliation.interface.js";
 
 export const ShopAffiliationSchema =
   createBaseSchema<IShopAffiliation>({

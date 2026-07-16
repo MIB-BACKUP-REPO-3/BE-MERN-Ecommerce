@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { ICrudController } from "../interfaces/controller/crud-controller.interface";
+import type { ICrudController } from "../interfaces/controller/crud-controller.interface.js";
 
-export const createCrudRoutes = (controller: ICrudController) => {
+export const  createCrudRoutes = (controller: ICrudController) => {
   const router = Router();
   router.get("/", controller.getAll);
   router.get("/:id", controller.getOne);

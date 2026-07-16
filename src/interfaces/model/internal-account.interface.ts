@@ -1,6 +1,6 @@
 import { Types } from "mongoose";
-import { AccountStatus } from "../../types/account-status.type";
-import { InternalAccountRole } from "../../types/internal-account.type";
+import type { InternalAccountRole } from "../../types/internal-account.type.js";
+import type { AccountStatus } from "../../types/account-status.type.js";
 
 export interface IInternalAccount {
   email: string;

@@ -1,5 +1,6 @@
-import { Request, Response, NextFunction } from "express";
-import { logger } from "../utils/logger";
+import type { NextFunction, Request, Response } from "express";
+import { logger } from "../utils/logger.js";
+
 export const errorHandler = (
   err: Error,
   req: Request,
@@ -7,7 +8,7 @@ export const errorHandler = (
   next: NextFunction,
 ) => {
   logger.error(err.message, {
-    path: req.path,
+    path: req.url,
     method: req.method,
     stack: err.stack,
   });

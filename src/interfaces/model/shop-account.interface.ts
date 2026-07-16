@@ -1,5 +1,5 @@
 import { Types } from "mongoose";
-import { AccountStatus } from "../../types/account-status.type";
+import type { AccountStatus } from "../../types/account-status.type.js";
 
 export interface IShopAccount {
   email: string;

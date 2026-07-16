@@ -1,20 +1,9 @@
-import { Request } from "express-serve-static-core";
-import { ICrudService } from "../interfaces/service/crud-service.interface";
+import type { IShopAccount } from "../interfaces/model/shop-account.interface.js";
+import { ShopAffiliation } from "../models/shop-affiliation.schema.js";
+import { BaseCrudService } from "./base-crud.service.js";
 
-export class ShopAccountService implements ICrudService {
-    getAll(request: Request): Promise<unknown[]> {
-        throw new Error("Method not implemented.");
+export class ShopAccountService extends BaseCrudService<IShopAccount>{
+    constructor(){
+        super(ShopAffiliation)
     }
-    getOne(request: Request): Promise<unknown> {
-        throw new Error("Method not implemented.");
-    }
-    create(request: Request): Promise<unknown> {
-        throw new Error("Method not implemented.");
-    }
-    update(request: Request): Promise<unknown> {
-        throw new Error("Method not implemented.");
-    }
-    remove(request: Request): Promise<unknown> {
-        throw new Error("Method not implemented.");
-    }
-}
+} 

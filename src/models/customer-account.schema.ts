@@ -1,4 +1,5 @@
-import { createBaseSchema, IBaseEntity } from "./base.schema";
+import type { IBaseEntity } from "../interfaces/model/base-entity.interface.js";
+import { createBaseSchema } from "./base.schema.js";
 
 export interface ICustomer extends IBaseEntity {
   firstName: string;

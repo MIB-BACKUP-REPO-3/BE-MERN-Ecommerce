@@ -1,8 +1,8 @@
 import { Types } from "mongoose";
-import { IBaseEntity } from "../../models/base.schema";
-import { OrderStatus } from "../../types/order-status.type";
-import { PaymentMethod } from "../../types/payment-method.type";
-import { PaymentStatus } from "../../types/payment-status.type";
+import type { IBaseEntity } from "./base-entity.interface.js";
+import type { OrderStatus } from "../../types/order-status.type.js";
+import type { PaymentMethod } from "../../types/payment-method.type.js";
+import type { PaymentStatus } from "../../types/payment-status.type.js";
 
 export interface IOrder extends IBaseEntity {
   shopId: Types.ObjectId;

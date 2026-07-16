@@ -5,7 +5,6 @@ import { shopAffiliationRouter } from "./shop-affiliation.router";
 import { shopAccountRouter } from "./shop-account.router";
 import { productRouter } from "./product.router";
 import { productCategoryRouter } from "./product-category.router";
-import { orderController } from "../controller/order.controller";
 import { orderRouter } from "./order.router";
 import { internalAccountRouter } from "./internal-account.router";
 import { customerAccountRouter } from "./customer-account.router";

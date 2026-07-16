@@ -1,20 +1,9 @@
-import { Request } from "express-serve-static-core";
-import { ICrudService } from "../interfaces/service/crud-service.interface";
+import type { IInternalAccount } from "../interfaces/model/internal-account.interface.js";
+import { InternalAccount } from "../models/internal-account.schema.js";
+import { BaseCrudService } from "./base-crud.service.js";
 
-export class InternalAccountService implements ICrudService {
-    getAll(request: Request): Promise<unknown[]> {
-        throw new Error("Method not implemented.");
-    }
-    getOne(request: Request): Promise<unknown> {
-        throw new Error("Method not implemented.");
-    }
-    create(request: Request): Promise<unknown> {
-        throw new Error("Method not implemented.");
-    }
-    update(request: Request): Promise<unknown> {
-        throw new Error("Method not implemented.");
-    }
-    remove(request: Request): Promise<unknown> {
-        throw new Error("Method not implemented.");
+export class InternalAccountService extends BaseCrudService<IInternalAccount>{
+    constructor(){
+        super(InternalAccount)
     }
 }

@@ -1,6 +1,6 @@
 import { model, Types } from "mongoose";
-import { createBaseSchema } from "./base.schema";
-import { IProduct } from "../interfaces/product.interface";
+import { createBaseSchema } from "./base.schema.js";
+import type { IProduct } from "../interfaces/model/product.interface.js";
 
 
 export const ProductSchema = createBaseSchema<IProduct>({

@@ -1,6 +1,6 @@
 import { model, Types } from "mongoose";
-import { createBaseSchema, IBaseEntity } from "./base.schema";
-import { IOrder } from "../interfaces/order.interface";
+import { createBaseSchema } from "./base.schema.js";
+import type { IOrder } from "../interfaces/model/order.interface.js";
 
 
 export const OrderSchema = createBaseSchema<IOrder>({

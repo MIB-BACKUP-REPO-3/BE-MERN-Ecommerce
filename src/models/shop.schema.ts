@@ -1,6 +1,6 @@
 import { model, Types } from "mongoose";
-import { createBaseSchema } from "./base.schema";
-import { IShop } from "../interfaces/shop.interface";
+import { createBaseSchema } from "./base.schema.js";
+import type { IShop } from "../interfaces/model/shop.interface.js";
 
 export const ShopSchema = createBaseSchema<IShop>({
   ownerId: {
