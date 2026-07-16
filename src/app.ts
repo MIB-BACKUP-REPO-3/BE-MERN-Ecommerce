@@ -1,5 +1,5 @@
 import express from "express";
-import router from "./routes/api.router";
+import router from "./route/api.router";
 import { errorHandler } from "./middleware/error-handler.middleware";
 import { notFoundHandler } from "./middleware/not-found.middleware";
 

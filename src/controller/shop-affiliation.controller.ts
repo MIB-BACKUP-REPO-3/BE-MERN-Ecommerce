@@ -1,4 +1,4 @@
-import { ShopAffiliationService } from "../services/shop-affiliation.service.js";
-import { createCrudControllerFromService } from "../utils/create-service-controller.js";
+import { ShopAffiliationService } from "../service/shop-affiliation.service.js";
+import { createCrudControllerFromService } from "../util/create-service-controller.js";
 
 export const shopAffiliationController = createCrudControllerFromService(ShopAffiliationService);

@@ -1,6 +1,6 @@
-import type { ICrudController } from "../interfaces/controller/crud-controller.interface.js";
-import type { ICrudService } from "../interfaces/service/crud-service.interface.js";
-import { asyncHandler } from "../utils/async-handler.js";
+import type { ICrudController } from "../interface/controller/crud-controller.interface.js";
+import type { ICrudService } from "../interface/service/crud-service.interface.js";
+import { asyncHandler } from "../util/async-handler.js";
 
 export const createCrudController = <T, CreateDTO, UpdateDTO, FilterDTO>(
   service: ICrudService<T, CreateDTO, UpdateDTO, FilterDTO>,
@@ -32,4 +32,5 @@ export const createCrudController = <T, CreateDTO, UpdateDTO, FilterDTO>(
     await service.remove(req.params.id as string);
     res.status(204).send();
   }),
+  
 });
