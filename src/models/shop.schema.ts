@@ -18,7 +18,6 @@ export const ShopSchema = createBaseSchema<IShop>({
   slug: {
     type: String,
     required: true,
-    unique: true,
     lowercase: true,
     trim: true,
   },
@@ -125,7 +124,6 @@ ShopSchema.index(
 );
 
 ShopSchema.index({
-  category: 1,
   status: 1,
 });
 
