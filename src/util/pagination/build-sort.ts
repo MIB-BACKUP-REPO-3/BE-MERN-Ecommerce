@@ -1,5 +1,5 @@
-import type { ISort } from "../interface/common/sort.interface.js";
-import { SortDirection } from "./constant/constants.js";
+import type { ISort } from "../../interface/common/sort.interface.js";
+import { SortDirection } from "../constant/constants.js";
 
 export function buildSort(
     sorts?: ISort[]

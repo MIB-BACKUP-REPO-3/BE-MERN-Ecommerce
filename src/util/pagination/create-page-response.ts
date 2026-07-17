@@ -1,5 +1,5 @@
-import type { IPageResponse } from "../interface/common/page-response.interfac.js";
-import type { IPagination } from "../interface/common/pagination interface.js";
+import type { IPageResponse } from "../../interface/common/page-response.interfac.js";
+import type { IPagination } from "../../interface/common/pagination interface.js";
 
 export function createPageResponse<T>(
     content:T[],

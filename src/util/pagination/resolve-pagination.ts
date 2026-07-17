@@ -1,6 +1,6 @@
-import type { IPageRequest } from "../interface/common/page-request.interface.js";
-import type { IPagination } from "../interface/common/pagination interface.js";
-import { PAGINATION_PREFERENCE } from "./constant/constants.js";
+import type { IPageRequest } from "../../interface/common/page-request.interface.js";
+import type { IPagination } from "../../interface/common/pagination interface.js";
+import { PAGINATION_PREFERENCE } from "../constant/constants.js";
 
 export function resolvePagination(
     request: IPageRequest

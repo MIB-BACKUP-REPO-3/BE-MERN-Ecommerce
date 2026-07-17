@@ -1,5 +1,5 @@
 import type { Query } from "mongoose";
-import type { IPagination } from "../interface/common/pagination interface.js";
+import type { IPagination } from "../../interface/common/pagination interface.js";
 
 export function applyPagination<T>(
     query: Query<T[], T>,
